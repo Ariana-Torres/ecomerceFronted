@@ -4,7 +4,7 @@ export const Countrys = () => {
   const [countrys, setCountrys] = useState<any[]>([]);
 
   const API_URL = "http://localhost:3000";
-  const ENDPOINT = "Countrys";
+  const ENDPOINT = "countrys";
 
   const getCountrys = async () => {
     const response = await fetch(`${API_URL}/${ENDPOINT}`);
@@ -18,14 +18,14 @@ export const Countrys = () => {
 
   return (
     <div>
-      <h1 className="text-primary">Lista de Marcas</h1>
-      <ul  className="categorias">
+      <h1>Paices</h1>
+      <ul>
         {countrys.map((item) => (
-          <li className="li" key={item.id}>
-            <h3 id="name" className="text-danger">{item.name}</h3>
+          <li key={item.id}>
+            <a>{item.name}</a>
           </li>
         ))}
-      
+    
       </ul>
     </div>
   );

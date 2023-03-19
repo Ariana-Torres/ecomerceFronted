@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import { Nav } from "./components/nav/Nav";
+import { Countrys } from "./components/Countrys";
+import { Genero } from "./components/Genero";
+import { Marca } from "./components/Marca";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -19,11 +22,10 @@ function App() {
 
   return (
     <div className="App">
-      <Nav />
-      <h1>Hola mundo react</h1>
-      {products.map((product: any) => (
-        <div key={product.id}>{product.name}</div>
-      ))}
+      <Nav/>
+      <Countrys/>
+      <Genero/>
+      <Marca/>
     </div>
   );
 }

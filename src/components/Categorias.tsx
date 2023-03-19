@@ -1,27 +1,26 @@
 import { useState, useEffect } from "react";
 
-export const Nav = () => {
-  const [menu, setMenu] = useState<any[]>([]);
+export const Categorias = () => {
+  const [categorias, setCategorias] = useState<any[]>([]);
 
   const API_URL = "http://localhost:3000";
-  const ENDPOINT = "menu";
+  const ENDPOINT = "categorias";
 
-
-  const getMenu = async () => {
+  const getCategorias = async () => {
     const response = await fetch(`${API_URL}/${ENDPOINT}`);
     const data = await response.json();
-    setMenu(data);
+    setCategorias(data);
   };
 
   useEffect(() => {
-    getMenu();
+    getCategorias();
   }, []);
 
   return (
     <div>
-      <h1>Nav</h1>
+      <h1>Categorias</h1>
       <ul>
-        {menu.map((item) => (
+        {categorias.map((item) => (
           <li key={item.id}>
             <a>{item.name}</a>
           </li>
