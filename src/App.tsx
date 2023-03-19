@@ -3,6 +3,7 @@ import { Nav } from "./components/nav/Nav";
 import { Countrys } from "./components/Countrys";
 import { Genero } from "./components/Genero";
 import { Marca } from "./components/Marca";
+import { Categorias } from "./components/Categorias";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -26,6 +27,7 @@ function App() {
       <Countrys/>
       <Genero/>
       <Marca/>
+      <Categorias/>
     </div>
   );
 }
